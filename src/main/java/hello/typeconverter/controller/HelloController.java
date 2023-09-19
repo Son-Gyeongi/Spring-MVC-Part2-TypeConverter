@@ -1,5 +1,6 @@
 package hello.typeconverter.controller;
 
+import hello.typeconverter.type.IpPort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +26,15 @@ public class HelloController {
     @GetMapping("/hello-v2")
     public String helloV2(@RequestParam Integer data) {
         System.out.println("data = " + data);
+        return "ok";
+    }
+
+    // 스프링 타입 컨버터 - 스프링에 Converter 적용하기
+    // 직접 정의한 타입인 IpPort 를 사용해보자.
+    @GetMapping("/ip-port")
+    public String ipPort(@RequestParam IpPort ipPort) {
+        System.out.println("ipPort IP = " + ipPort.getIp());
+        System.out.println("ipPort PORT = " + ipPort.getPort());
         return "ok";
     }
 }
