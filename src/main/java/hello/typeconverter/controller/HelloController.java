@@ -23,6 +23,11 @@ public class HelloController {
     }
 
     // 스프링 MVC가 제공하는 @RequestParam 을 사용
+    /**
+     * 스프링 타입 컨버터 - 포맷터 적용하기
+     * http://localhost:8080/hello-v2?data=10,000
+     * "10,000" -> 숫자 10000
+     */
     @GetMapping("/hello-v2")
     public String helloV2(@RequestParam Integer data) {
         System.out.println("data = " + data);
