@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- 스프링 타입 컨버터 - 스프링이 제공하는 기본 포맷터 -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<ul>
+  <li>${form.number}: <span th:text="${form.number}" ></span></li>
+  <li>${{form.number}}: <span th:text="${{form.number}}" ></span></li>
+  <li>${form.localDateTime}: <span th:text="${form.localDateTime}" ></span></
+  li>
+  <li>${{form.localDateTime}}: <span th:text="${{form.localDateTime}}" ></
+    span></li>
+</ul>
+</body>
+</html>

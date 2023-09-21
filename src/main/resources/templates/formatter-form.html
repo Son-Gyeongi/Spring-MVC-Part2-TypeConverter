@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!-- 스프링 타입 컨버터 - 스프링이 제공하는 기본 포맷터 -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${form}" th:method="post">
+<!--    th:field는 타입 컨버터 자동으로 적용된다. -->
+    number <input type="text" th:field="*{number}"><br/>
+    localDateTime <input type="text" th:field="*{localDateTime}"><br/>
+    <input type="submit"/>
+</form>
+</body>
+</html>
